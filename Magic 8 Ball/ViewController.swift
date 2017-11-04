@@ -22,10 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Generates random number
-        randomBallNumber = Int(arc4random_uniform(4))
-        // Based on random number generated, images switch on device
-        imageView.image = UIImage(named: ballArray[randomBallNumber])
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,9 +31,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func askBtn(_ sender: Any) {
-        
-        
+        newBallImage()
     }
     
+    func newBallImage() {
+        // Generates random number
+        randomBallNumber = Int(arc4random_uniform(4))
+        // Based on random number generated, images switch on device
+        imageView.image = UIImage(named: ballArray[randomBallNumber])
+    }
 }
 
