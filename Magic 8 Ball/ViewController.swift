@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     func newBallImage() {
         // Generates random number
-        randomBallNumber = Int(arc4random_uniform(4))
+        randomBallNumber = Int(arc4random_uniform(5))
         // Based on random number generated, images switch on device
         imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
