@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
     
+    // Shake gesture detection
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         newBallImage()
     }
