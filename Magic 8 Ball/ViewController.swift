@@ -40,5 +40,9 @@ class ViewController: UIViewController {
         // Based on random number generated, images switch on device
         imageView.image = UIImage(named: ballArray[randomBallNumber])
     }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        newBallImage()
+    }
 }
 
